@@ -23,6 +23,7 @@ class Home extends Component {
     
     //map each of the array's object to have jsx format
     render(){
+        //use this.props as it attached to the props in mapStateToProps()
         console.log(this.props)
         const {posts} = this.props;
         const postList = posts.length ? (
@@ -51,6 +52,7 @@ class Home extends Component {
     }
 }
 
+//to read data from the states
 const mapStateToProps = (state) => {
     return{
         posts: state.posts
